@@ -8,6 +8,11 @@ namespace ECommerceApp.Models
         public Customers()
         {
             Id = Guid.NewGuid();
+            AddressBook = new HashSet<AddressBook>();
+            Cart = new HashSet<Cart>();
+            CartAttributes = new HashSet<CartAttributes>();
+            CustomerInfo = new HashSet<CustomerInfo>();
+            Orders = new HashSet<Orders>();
         }
 
         public Guid Id { get; set; }
@@ -21,5 +26,11 @@ namespace ECommerceApp.Models
         public string Fax { get; set; }
         public string Password { get; set; }
         public bool Newsletteropted { get; set; }
+
+        public ICollection<AddressBook> AddressBook { get; set; }
+        public ICollection<Cart> Cart { get; set; }
+        public ICollection<CartAttributes> CartAttributes { get; set; }
+        public ICollection<CustomerInfo> CustomerInfo { get; set; }
+        public ICollection<Orders> Orders { get; set; }
     }
 }
