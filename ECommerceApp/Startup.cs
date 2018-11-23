@@ -49,7 +49,7 @@ namespace ECommerceApp
             })
             .AddJwtBearer(builder =>
             {
-                builder.Authority = "https://localhost:44333";
+                builder.Authority = "https://ecommerceapp20181122090258.azurewebsites.net";
                 builder.Audience = "FlixOneStore.ReadAccess";
                 builder.RequireHttpsMetadata = false;
             });
